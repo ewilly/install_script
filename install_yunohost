@@ -75,7 +75,7 @@ ensure_root() {
 }
 
 ensure_pi_logout() {
-    who | grep pi > /dev/null && return 1
+    who | grep -Fx pi > /dev/null && return 1
     return 0
 }
 
